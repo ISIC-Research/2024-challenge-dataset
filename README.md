@@ -1,8 +1,8 @@
-# 2024-challenge-dataset
-Set of scripts and instructions for sub-selecting and formatting raw data exported by the Canfield ISIC2024 Tile Export Tool. The resulting dataset was prepared for a competition on Kaggle held during the Summer of 2024.
+### 2024-challenge-dataset
+This package contains the set of scripts and instructions for sub-selecting and formatting raw data exported by the Canfield ISIC2024 Tile Export Tool. The dataset was prepared for a competition on Kaggle held during the Summer of 2024.
 
 
-## Instruction Manual
+# Instruction Manual
 *A guide for image extraction, labeling, and upload for the ISIC 2024 Challenge dataset*
 
 First off, thank you so much for contributing data for this project! With this iteration in the ISIC Grand Challenge series, we will explore a new direction: skin cancer detection using 3D total body photography (TBP). While all prior ISIC challenges have focused on dermoscopy imaging, this will be the first to use images of lesions detected and cropped from 3D TBP. A single TBP capture can provide hundreds of example lesions for training AI algorithms and, since all lesions on the patient are imaged, provides patient-level contextual information for ugly duckling approaches. By focusing on TBP crops for the ISIC challenge, we are facilitating the advancement of AI applications in TBP clinical imaging systems. By nature of the TBP crops, this effort also intends to bridge the AI knowledge gap between algorithms that require harder-to-acquire dermoscopic photography and lower quality/lower resolution clinical photos and cell phone images.
