@@ -1,0 +1,46 @@
+ISIC2024 Tile Export Tool
+Brian D'Alessandro, Ph.D., November 2023
+v1.0.0
+========================================
+
+This README describes the installation, output files, & format for the ISIC2024 Tile Export Tool.
+
+
+Installation
+------------
+Place "VectraDBTool.exe" in the "bin" directory of the Vectra installation (e.g. C:\Vectra\bin), and "ISIC2024tool.exe" in the "lesion-analysis" subfolder (e.g. C:\Vectra\bin\lesion-analysis).
+
+To batch process WB360 captures, run the VectraDBTool, select the desired database, then click "DermX Utils > Export ISIC 2024 tool data" from the top menu bar of the app. A pop up box will allow you to choose an output directory to write the tiling data. A checkbox option to not overwrite existing data is available. The default when checked is to skip exports already completed.
+
+After clicking OK, the tool will then prompt for MRNs to process. If nothing is entered, the tool will loop over all captures in the entire database. Otherwise, enter MRNs on separate lines, and the tool will loop over only those MRNs.
+
+Within the specified output directory, the batch output will have the following structure: "\<patientID>-<patientMRN>\<captureID>\", followed by the output of the tiling tool on the capture as described below.
+
+There will additionally be a top level "patients.csv" containing data & metadata on each capture processed.
+
+
+Tiling Output
+-------------
+Within the output of a capture, the following items may be found:
+
+- 'isic24_data_1.0.0.csv'
+  - A spreadsheet of data for each tile.
+  
+- 'isic24_data_1.0.0.json'
+  - The same tile data, in JSON form, similar in structure to the original lesion analysis json files.
+  
+- 'tiles' folder
+  - The main output folder of auto-detected lesion tiles. 
+  - Images have the format: <uuid>.jpg
+  
+- 'tiles_tagged' folder
+  - Manual tags in DermaGraphix, which match to an auto-detected lesion, will be written here.
+  - Images have the format: <tagNumber>_<uuid>.jpg
+  
+- 'tiles_tagged_NL' folder
+  - Manual tags in DermaGraphix, which match to an auto-detected item classified as non-lesion, will be written here.
+  - Images have the format: <tagNumber>_<uuid>.jpg
+  
+- 'tiles_unmatched' folder
+  - Manual tags in DermaGraphix, which do not match to any lesions or non-lesions, will be written here.
+  - Images have the format: <tagNumber>.jpg
