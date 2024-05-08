@@ -80,8 +80,8 @@ Table 1. Structured diagnostic variables.
 | Melanoma class |	mel_class |	invasive melanoma |
 | | | melanoma in situ |
 | | | Unknown or N/A |
-| Melanoma mitotic index (#/mm^2) | mel_mit |	Numeric |
-| Melanoma thickness (mm)	| mel_thick	| Numeric |
+| Melanoma mitotic index (#/mm^2) | mel_mitotic_index |	Numeric |
+| Melanoma thickness (mm)	| mel_thick_mm	| Numeric |
 |BCC subtype: nodular	| bcc_nod	| Yes |
 | | | No |
 | | | unknown or N/A |
